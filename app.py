@@ -13,7 +13,7 @@ from resources.store import Store, StoreList
 
 
 app = Flask(__name__)
-
+app.config["PROPAGATE_EXCEPTIONS"] = True
 app.config['DEBUG'] = True
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL','sqlite:///data.db')
